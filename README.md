@@ -1,15 +1,20 @@
 # Energy Experts
 (we need a description here!)
+Website (User sees a map of campus)
 
 ## Table of Contents
 * Known Bugs, Issues, or Limitations
+* Recommended Browser
+* Installation & Instructions
+* Features
+* Important Notes
+* Contributors
 
-Website (User sees a map of campus)
 
 ## Known Bugs, Issues, or Limitations
 
-## Browser
-Recommended Chrome
+## Recommended Browser
+Chrome
 
 ## Installation & Instructions
 
