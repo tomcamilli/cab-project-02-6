@@ -1,6 +1,10 @@
-Website (User sees a map of campus)
+# Energy Experts
+(we need a description here!)
 
-### Group 02-6 (Melissa Duff, Matthew Volpe, Julianna Iannini, Michael Wertz, Thomas Camilli, Tj Cilvick, & Zane Mrazek)
+## Table of Contents
+* Known Bugs, Issues, or Limitations
+
+Website (User sees a map of campus)
 
 ## Known Bugs, Issues, or Limitations
 
@@ -15,7 +19,7 @@ Recommended Chrome
 
 ### Finally, run the app.
 
-## Using the Application
+## Features
 
 Hover mouse/click buildings for stats on
 * Computer labs 
@@ -28,7 +32,15 @@ Hover mouse over grids for stats on
 * Meter name
 * Grid cost
 
-### Important Notes:
+## Important Notes:
 
 THE PROJECT IS STILL UNDER DEVELOPMENT
   
+## Contributors
+* Melissa Duff
+* Matthew Volpe
+* Julianna Iannini
+* Michael Wertz
+* Thomas Camilli
+* Tj Cilvick
+* Zane Mrazek
