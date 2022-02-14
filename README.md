@@ -1,11 +1,8 @@
-README
+Website (User sees a map of campus)
 
-Website
+### Group 02-6 (Melissa Duff, Matthew Volpe, Julianna Iannini, Michael Wertz, Thomas Camilli, Tj Cilvick, & Zane Mrazek)
 
 ## Known Bugs, Issues, or Limitations
-
-User sees a map of campus
-
 
 ## Browser
 Recommended Chrome
@@ -21,21 +18,15 @@ Recommended Chrome
 ## Using the Application
 
 Hover mouse/click buildings for stats on
-
-  -Computer labs 
-
-  -Classrooms
-
-  -Square Footage
-  
-  -Building type (academic, residential, etc.)
+* Computer labs 
+* Classrooms
+* Square Footage
+* Building type (academic, residential, etc.)
   
  
 Hover mouse over grids for stats on
-  
-  -Meter name
-  
-  -Grid cost
+* Meter name
+* Grid cost
 
 ### Important Notes:
 
