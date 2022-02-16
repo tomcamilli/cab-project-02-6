@@ -1,5 +1,6 @@
 # Energy Experts
 (we need a description here!)
+
 Website (User sees a map of campus)
 
 ## Table of Contents
