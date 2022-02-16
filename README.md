@@ -1,5 +1,5 @@
 # Energy Experts
-(we need a description here!)
+The Energy Experts database will be able to determine an approximate cost of energy per a given month as well as determine an approximate a cost of energy per a given energy source. 
 
 Website (User sees a map of campus)
 
