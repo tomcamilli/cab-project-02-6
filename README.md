@@ -28,15 +28,15 @@ Chrome
 ## Features
 
 Hover mouse/click buildings for stats on
-* Computer labs 
-* Classrooms
-* Square Footage
-* Building type (academic, residential, etc.)
-  
- 
-Hover mouse over grids for stats on
-* Meter name
-* Grid cost
+* Property Name
+* Gross Floor Area
+* Building Age
+* Building Type (academic, residential, etc.)
+* Year Built
+* Property Type
+* Approximate Energy Cost (derived attribute, calculated from other variables)
+* Possible: Computer labs
+* Possible: Classrooms
 
 ## Important Notes:
 
