@@ -18,7 +18,7 @@ CREATE TABLE costs(
 	PortfolioManagerMeterID char(8),
 	StartDate date,
 	EndDate date,
-	Usage int,
+	Usage float,
 	Cost float,
 	FOREIGN KEY (PortfolioManagerMeterID)
 	REFERENCES meters (PortfolioManagerMeterID) MATCH FULL,
