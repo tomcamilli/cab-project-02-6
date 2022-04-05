@@ -1,9 +1,9 @@
 CREATE TABLE buildings(
 	BuildingName text,
-	PropertyType text,
 	PortfolioManagerID char(7) PRIMARY KEY,
-	GrossFloorArea int,
 	YearBuilt smallint,
+	PropertyType text,
+	GrossFloorArea int,
 	OperationalHours text,
 	NumComputerLabs int
 );
@@ -18,8 +18,8 @@ CREATE TABLE costs(
 	PortfolioManagerMeterID char(8),
 	StartDate date,
 	EndDate date,
-	Cost float,
 	Usage int,
+	Cost float,
 	FOREIGN KEY (PortfolioManagerMeterID)
 	REFERENCES meters (PortfolioManagerMeterID) MATCH FULL,
 	PRIMARY KEY (PortfolioManagerMeterID, StartDate, EndDate)
