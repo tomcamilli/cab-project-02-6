@@ -92,7 +92,8 @@ app = Flask(__name__)
 # serve form web page
 @app.route("/")
 def form():
-    return render_template('eD-form.html')
+	return render_template('eD-form.html')
+	flash('This is a test')
 
 # handle venue POST and serve result web page
 @app.route('/venue-handler', methods=['POST'])
