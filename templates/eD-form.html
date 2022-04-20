@@ -10,8 +10,8 @@
 	    <h4>Hello this is a test!</h4>
         <form action="/venue-handler" method="POST">
             <div>
-                Find all the events at this venue_id
-                <input type="text" name="venue_id">
+                Find all the meters for a certain type
+                <input type="text" name="MeterType">
             </div>
                 <input type="submit" value="Submit">
         </form>
@@ -21,7 +21,7 @@
             <div>
 		        Enter any PostgreSQL command, terminated with a semicolon
                 <br />
-	            Example query: SELECT * FROM countries;
+	            Example query: SELECT * FROM meters;
 		        <input type="text" name="query">
             </div>
                 <input type="submit" value="Submit">
