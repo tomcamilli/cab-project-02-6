@@ -93,11 +93,6 @@ app = Flask(__name__)
 @app.route("/")
 def form():
 	return render_template('eD-form.html')
-	
-def dropdown():
-	MeterTypeList = ['Natural Gas', 'Electric - Grid']
-	#flash('This is a test')
-	return render_template('input.html', MeterTypeList=MeterTypeList)
 
 # handle venue POST and serve result web page
 @app.route('/venue-handler', methods=['POST'])
