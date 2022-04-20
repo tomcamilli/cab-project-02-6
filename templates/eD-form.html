@@ -7,8 +7,15 @@
     <body>
 	    <h3>Group 6</h3>
 
-	    <h4>Hello this is a test!</h4>
-        <form action="/venue-handler" method="POST">
+	    <h4>ENERGY EXPERTS!</h4>
+				Choose a meter type
+				<select name=MeterTypeList method="GET" action="/">			
+				{% for type in MeterTypeList %}
+					<option value="{{type}}" SELECTED>{{type}}</option>"
+				{% endfor %}
+				</select>
+
+		<form action="/venue-handler" method="POST">
             <div>
                 Find all the meters for a certain type
                 <input type="text" name="MeterType">
