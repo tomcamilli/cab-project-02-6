@@ -98,7 +98,7 @@ def form():
 # handle venue POST and serve result web page
 @app.route('/venue-handler', methods=['POST'])
 def venue_handler():
-    rows = connect('SELECT MeterName, MeterType FROM meters WHERE MeterType = ' + request.form['MeterType'] + ';')
+    rows = connect('SELECT MeterName, MeterType FROM meters WHERE MeterType = \'' + request.form['MeterType'] + '\';')
     return render_template('my-result.html', rows=rows)
 
 # handle query POST and serve result web page
