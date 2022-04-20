@@ -1,0 +1,9 @@
+<html>
+  <p style="font-family:verdana">
+    Choose meter type:<SELECT name="MeterType" style="font-family:verdana">
+      {% for t in MeterTypeList %}
+	      <OPTION value={{t[0]}}>{{t[1]}}</OPTION>
+      {% endfor %}
+   </SELECT>
+  </p>
+</html>
