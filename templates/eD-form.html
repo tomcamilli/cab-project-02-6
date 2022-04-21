@@ -36,6 +36,9 @@
             </div>
                 <input type="submit" value="Submit">
         </form>
+	<div>
+		<img src="{{ url_for('static',filename='/images/tcnj-map.png') }}" alt="Map of TCNJ">
+	    </div>
     </body>
 
     <!-- minimal styling -->
@@ -47,5 +50,11 @@
         div {
             margin: 1% 0;
         }
+	img {
+		width: 85%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	    }
     </style>
 </html>
