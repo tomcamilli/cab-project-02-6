@@ -7,11 +7,21 @@
     <body>
 	    <h3>Group 6</h3>
 
-	    <h4>Hello this is a test!</h4>
-        <form action="/venue-handler" method="POST">
+	    <h4>ENERGY EXPERTS!</h4>
+		<form action="/venue-handler" method="POST">
+				<p style="font-family:verdana">
+    			Choose meter type:
+				<SELECT name="MeterTypeDrop" style="font-family:verdana">
+	      				<OPTION value=""></OPTION>
+						<OPTION value="Natural Gas">Natural Gas</OPTION>
+						<OPTION value="Electric - Grid">Electric - Grid</OPTION>
+  				</SELECT>
+  </p>
+
+		<!form action="/venue-handler" method="POST">
             <div>
                 Find all the meters for a certain type
-                <input type="text" name="MeterType">
+                <!input type="text" name="MeterType">
             </div>
                 <input type="submit" value="Submit">
         </form>

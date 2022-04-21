@@ -93,13 +93,13 @@ app = Flask(__name__)
 @app.route("/")
 def form():
 	return render_template('eD-form.html')
-	flash('This is a test')
 
 # handle venue POST and serve result web page
 @app.route('/venue-handler', methods=['POST'])
 def venue_handler():
-    rows = connect('SELECT MeterName, MeterType FROM meters WHERE MeterType = \'' + request.form['MeterType'] + '\';')
-    return render_template('my-result.html', rows=rows)
+	rows = connect('SELECT MeterName, MeterType FROM meters WHERE MeterType = \'' + request.form['MeterTypeDrop'] + '\';')
+	return render_template('my-result.html', rows=rows)
+
 
 # handle query POST and serve result web page
 @app.route('/query-handler', methods=['POST'])
