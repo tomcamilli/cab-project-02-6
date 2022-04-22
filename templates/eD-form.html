@@ -26,6 +26,40 @@
                 <input type="submit" value="Submit">
         </form>
 
+		<form action="/meter-cost-handler" method="POST">
+
+				<br>
+				<label for="metertype">Pick a meter type</label>
+				<select name="metertype" style="font-family:verdana">
+	      				<option value=""></option>
+						<option value="Natural Gas">Natural Gas</option>
+						<option value="Electric - Grid">Electric - Grid</option>
+				</select>
+				<br>
+				<label for="year">Pick a year</label>
+				<input type="number" min="2009" max="2022" name="year" id="year">
+				<br>
+				<label for="month">Pick a month</label>
+				<select name="month" style="font-family:verdana">
+	      				<option value=""></option>
+						<option value="January">January</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+  				</select>
+
+				<br>
+				<input type="submit" value="Submit">
+		</form>
+
 	    <h4>Example 2</h4>
         <form action="/query-handler" method="POST">
             <div>
