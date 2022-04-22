@@ -55,6 +55,53 @@ import psycopg2
 from config import config
 from flask import Flask, render_template, request
 
+def dateTranslate(soe, year, month):
+	startday = '01'
+	endday = '01'
+	m = 0;
+	if month == 'January':
+		endday = '31'
+		m = '01'
+	elif month == 'February':
+		endday = '28'
+		m = '02'
+	elif month == 'March':
+		endday = '31'
+		m = '03'
+	elif month == 'April':
+		endday = '30'
+		m = '04'
+	elif month == 'May':
+		endday = '31'
+		m = '05'
+	elif month == 'June':
+		endday = '30'
+		m = '06'
+	elif month == 'July':
+		endday = '31'
+		m = '07'
+	elif month == 'August':
+		endday = '31'
+		m = '08'
+	elif month == 'September':
+		endday = '30'
+		m = '09'
+	elif month == 'October':
+		endday = '31'
+		m = '10'
+	elif month == 'November':
+		endday = '30'
+		m = '11'
+	elif month == 'December':
+		endday = '31'
+		m = '12'
+	
+	if soe == 's':
+		return '%s-%s-%s' % (year, m, startday)
+	elif soe == 'e':
+		return '%s-%s-%s' % (year, m, endday)
+	
+
 # Connect to the PostgreSQL database server
 def connect(query):
     conn = None
@@ -106,6 +153,13 @@ def venue_handler():
 def query_handler():
     rows = connect(request.form['query'])
     return render_template('my-result.html', rows=rows)
+
+@app.route('/meter-cost-handler', methods=['POST'])
+def meter_cost_handler():
+	y = request.form['year']
+	m = request.form['month']
+	rows = connect('SELECT MeterName, Cost, Usage, StartDate FROM meters NATURAL JOIN costs WHERE MeterType = \'' + request.form['metertype'] + '\' AND StartDate >= \'' + dateTranslate('s',y,m) + '\' AND StartDate <= \'' + dateTranslate('e',y,m) +'\';')
+	return render_template('my-result.html', rows=rows)
 
 if __name__ == '__main__':
     app.run(debug = True)
