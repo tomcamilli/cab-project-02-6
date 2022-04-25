@@ -141,8 +141,17 @@ app = Flask(__name__)
 def form():
 	return render_template('eD-form.html')
 
+@app.route("/building-handler")
+def building_handle():#r
+	buildinglist = connect('SELECT BuildingName FROM buildings;')
+	return render_template('eD-form.html', buildinglist=buildinglist)
+
 # handle venue POST and serve result web page
 @app.route('/venue-handler', methods=['POST'])
+def building_handler():
+	buildinglist = connect('SELECT BuildingName FROM buildings;')
+	return render_template('eD-form.html', buildinglist=buildinglist)
+
 def venue_handler():
 	rows = connect('SELECT MeterName, MeterType FROM meters WHERE MeterType = \'' + request.form['MeterTypeDrop'] + '\';')
 	return render_template('my-result.html', rows=rows)

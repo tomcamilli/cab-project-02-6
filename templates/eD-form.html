@@ -8,8 +8,26 @@
 	    <h3>Group 6</h3>
 
 	    <h4>ENERGY EXPERTS!</h4>
+		<form action="/building-handler">
+			<label for="building">Choose a building</label>
+				<select name="building">
+					{% for b in buildinglist %}
+						<option value="{{ b[0] }}"> {{ b[0] }} </option>
+					{% endfor %}
+				</select>
+		</form>
 		<form action="/venue-handler" method="POST">
 				<p style="font-family:verdana">
+
+
+				<label for="building">Choose a building</label>
+				<select name="building">
+					{% for b in buildinglist %}
+						<option value="{{ b[0] }}"> {{ b[0] }} </option>
+					{% endfor %}
+				</select>
+
+
     			Choose meter type:
 				<SELECT name="MeterTypeDrop" style="font-family:verdana">
 	      				<OPTION value=""></OPTION>
@@ -26,7 +44,7 @@
                 <input type="submit" value="Submit">
         </form>
 
-		<form action="/meter-cost-handler" method="POST">
+		<form action=s"/meter-cost-handler" method="POST">
 
 				<br>
 				<label for="metertype">Pick a meter type</label>
