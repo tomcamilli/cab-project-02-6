@@ -159,7 +159,8 @@ def meter_cost_handler():
 	y = request.form['year']
 	m = request.form['month']
 	rows = connect('SELECT MeterName, Cost, Usage, StartDate FROM meters NATURAL JOIN costs WHERE MeterType = \'' + request.form['metertype'] + '\' AND StartDate >= \'' + dateTranslate('s',y,m) + '\' AND StartDate <= \'' + dateTranslate('e',y,m) +'\';')
-	return render_template('my-result.html', rows=rows)
+	heads = ['meter', 'cost', 'usage', 'date']
+	return render_template('my-result.html', rows=rows, heads=heads)
 
 if __name__ == '__main__':
     app.run(debug = True)
