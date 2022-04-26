@@ -139,27 +139,31 @@ app = Flask(__name__)
 # serve form web page
 @app.route("/")
 def form():
-	return render_template('eD-form.html')
+	building_list = connect('SELECT BuildingName FROM buildings;')
+	return render_template('eD-form.html', building_list=building_list)
 
-# handle venue POST and serve result web page
-@app.route('/venue-handler', methods=['POST'])
-def venue_handler():
-	rows = connect('SELECT MeterName, MeterType FROM meters WHERE MeterType = \'' + request.form['MeterTypeDrop'] + '\';')
-	return render_template('my-result.html', rows=rows)
-
-
-# handle query POST and serve result web page
-@app.route('/query-handler', methods=['POST'])
-def query_handler():
-    rows = connect(request.form['query'])
-    return render_template('my-result.html', rows=rows)
-
+# handle meter-cost POST and serve result web page
 @app.route('/meter-cost-handler', methods=['POST'])
 def meter_cost_handler():
 	y = request.form['year']
 	m = request.form['month']
 	rows = connect('SELECT MeterName, Cost, Usage, StartDate FROM meters NATURAL JOIN costs WHERE MeterType = \'' + request.form['metertype'] + '\' AND StartDate >= \'' + dateTranslate('s',y,m) + '\' AND StartDate <= \'' + dateTranslate('e',y,m) +'\';')
 	heads = ['meter', 'cost', 'usage', 'date']
+	return render_template('my-result.html', rows=rows, heads=heads)
+
+# handle building POST and serve result web page
+#@app.route('/dynamic-building-handler', methods=['POST'])
+#def dynamic_building_handler():
+	
+#	print(building_list)
+#	return render_template('eD-form.html', building_list=building_list)
+
+# handle building POST and serve result web page
+@app.route('/building-handler', methods=['POST'])
+def building_handler():
+	building_list = connect('SELECT BuildingName FROM buildings;')
+	rows = connect('SELECT BuildingName, YearBuilt, PropertyType, GrossFloorArea, OperationalHours, NumComputerLabs FROM buildings WHERE BuildingName = \'' + request.form['building_name'] + '\';')
+	heads = ['building', 'year built', 'property type', 'gross floor area', 'operational hours', '# of computer labs']
 	return render_template('my-result.html', rows=rows, heads=heads)
 
 if __name__ == '__main__':
