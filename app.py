@@ -139,7 +139,8 @@ app = Flask(__name__)
 # serve form web page
 @app.route("/")
 def form():
-	return render_template('eD-form.html')
+	building_list = connect('SELECT BuildingName FROM buildings;')
+	return render_template('eD-form.html', building_list=building_list)
 
 # handle meter-cost POST and serve result web page
 @app.route('/meter-cost-handler', methods=['POST'])
@@ -151,10 +152,11 @@ def meter_cost_handler():
 	return render_template('my-result.html', rows=rows, heads=heads)
 
 # handle building POST and serve result web page
-@app.route('/building-dynamic-handler', methods=['POST'])
-def building_handler():
-	building_list = connect('SELECT BuildingName FROM buildings;')
-	return render_template('eD-form.html', rows=rows, heads=heads)
+#@app.route('/dynamic-building-handler', methods=['POST'])
+#def dynamic_building_handler():
+	
+#	print(building_list)
+#	return render_template('eD-form.html', building_list=building_list)
 
 # handle building POST and serve result web page
 @app.route('/building-handler', methods=['POST'])

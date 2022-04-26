@@ -5,9 +5,7 @@
         <title>Form for Energy Demand</title>
     </head>
     <body>
-	    <h3>Group 6</h3>
-
-	    <h4>ENERGY EXPERTS!</h4>
+	    <h3>Energy Experts</h3>
 
 		<form action="/meter-cost-handler" method="POST">
 
@@ -48,11 +46,8 @@
 				<br>
 				<label for="building_name">Pick a building name</label>
 				<select name="building_name" style="font-family:verdana">
-	      				<!--<option value=""></option>
-						<option value="Ely Allen Brewster House">Ely Allen Brewster House</option>
-						<option value="Armstrong Hall">Armstrong Hall</option>-->
-						{% for x in building_list %}
-						<option value="{{x.BuildingName}}">{{x}}</option>
+						{% for b in building_list %}
+							<option value="{{ b[0] }}">{{ b[0] }}</option>
 						{% endfor %}
 				</select>
 				<br>
