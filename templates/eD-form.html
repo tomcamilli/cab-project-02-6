@@ -4,12 +4,16 @@
     <head>
         <title>Form for Energy Demand</title>
     </head>
-    <body>
-	    <h3>Energy Experts</h3>
+    <body style="background-color:#B2D3C2;font-family: 'Trebuchet MS', sans-serif;">
+	    <h3>ENERGY EXPERTS</h3>
+
+		<p>The Energy Experts database is able to determine the approximate cost of energy per a given month as well as determine an approximate cost of energy per a given energy source.</p>
+
+		<hr>
+		<b>Find cost and usage for given meter type and month:</b>
 
 		<form action="/meter-cost-handler" method="POST">
 
-				<br>
 				<label for="metertype">Pick a meter type</label>
 				<select name="metertype" style="font-family:verdana">
 	      				<option value=""></option>
@@ -41,9 +45,12 @@
 				<input type="submit" value="Submit">
 		</form>
 
-		<form action="/building-handler" method="POST">
+		<br>
+		<hr>
 
-				<br>
+		<b>Find information for a specific building:</b>
+
+		<form action="/building-handler" method="POST">
 				<label for="building_name">Pick a building name</label>
 				<select name="building_name" style="font-family:verdana">
 						{% for b in building_list %}
@@ -53,6 +60,7 @@
 				<br>
 				<input type="submit" value="Submit">
 		</form>
+		<br>
 
 		<p>Map for reference</p>
 		<div>
@@ -69,6 +77,11 @@
         div {
             margin: 1% 0;
         }
+		ctr_text {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 		img {
 			width: 85%;
 			display: block;
