@@ -45,7 +45,13 @@ Retrieve information for a specific building:
 * Property Type
 * Gross Floor Area
 * Operational Hours
-* # of Computer Labs
+* Number of Computer Labs
+
+## Screenshots
+
+![](https://github.com/TCNJ-degoodj/cab-project-02-6/blob/main/static/images/form_ex.png)
+
+![](https://github.com/TCNJ-degoodj/cab-project-02-6/blob/main/static/images/results_ex.png)
 
 ## Important Notes:
 
