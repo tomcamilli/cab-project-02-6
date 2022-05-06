@@ -4,11 +4,12 @@ The Energy Experts database will be able to determine an approximate cost of ene
 ## Table of Contents
 * Known Bugs, Issues, or Limitations
 * Recommended Browser
-* Installation & Instructions
+* Running the Scripts
+* Running the Website
 * Features
+* Screenshots
 * Important Notes
 * Contributors
-
 
 ## Known Bugs, Issues, or Limitations
 * More error handling (ex: if no data is available for a given selection, display a "no data found" page.
@@ -30,7 +31,6 @@ Chrome
 
 1) Navigate into the "cab-project-02-6" directory in the terminal
 2) Run the command `sh build_db.sh`
-
 
 ## Features
 
