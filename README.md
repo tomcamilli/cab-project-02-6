@@ -1,8 +1,6 @@
 # Energy Experts
 The Energy Experts database will be able to determine an approximate cost of energy per a given month as well as determine an approximate a cost of energy per a given energy source. 
 
-Website (User sees a map of campus)
-
 ## Table of Contents
 * Known Bugs, Issues, or Limitations
 * Recommended Browser
@@ -13,30 +11,41 @@ Website (User sees a map of campus)
 
 
 ## Known Bugs, Issues, or Limitations
+* More error handling (ex: if no data is available for a given selection, display a "no data found" page.
+* Add admin and account management, allow admin members to add data to the back-end.
+* Connect buildings and meter/cost through an equation using build operational hours, # computer labs, etc.
+* Add an "about" page that helps users understand how to use the application and other details (who the contributors are).
+* Implement invisible buttons on the map that resize along with the map/page, have associations with certain buildings. 
 
 ## Recommended Browser
 Chrome
 
-## Installation & Instructions
+## Running the Scripts
 
-### Install PostgreSQL
+1) Navigate to the "src/scripts" folder in the terminal.
+2) Run the command `export FLASK_APP=app.py`
+3) Run the command `flask run`
 
-### Install this Repository
+## Running the Website
 
-### Finally, run the app.
+1) Navigate into the "cab-project-02-6" directory in the terminal
+2) Run the command `sh build_db.sh`
+
 
 ## Features
 
-Hover mouse/click buildings for stats on
+Retrieve information for a given meter type and month/year:
+* Meter
+* Cost
+* Usagge
+
+Retrieve information for a specific building:
 * Property Name
-* Gross Floor Area
-* Building Age
-* Building Type (academic, residential, etc.)
 * Year Built
 * Property Type
-* Approximate Energy Cost (derived attribute, calculated from other variables)
-* Possible: Computer labs
-* Possible: Classrooms
+* Gross Floor Area
+* Operational Hours
+* # of Computer Labs
 
 ## Important Notes:
 
