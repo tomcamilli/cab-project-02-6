@@ -1,0 +1,103 @@
+<!-- /templates/my-form.html-->
+
+<html>
+    <head>
+        <title>Form for Energy Demand</title>
+    </head>
+    <body style="background-color:#B2D3C2;font-family: 'Trebuchet MS', sans-serif;">
+		<div style="background-color:#4384F4;">
+		<br>
+	    <h2 style="text-align:center">ENERGY EXPERTS</h2>
+
+		
+			<img src="{{ url_for('static',filename='/images/logo.png') }}" alt="Energy Experts Logo" style="width:140px;height:140px;display:block;margin-left:auto;margin-right:auto">
+
+		<p style="text-align:center">The Energy Experts database is able to determine the approximate cost of energy per a given month as well as determine an approximate cost of energy per a given energy source.</p>
+		<br>
+
+		</div>
+
+		<b>Find cost and usage for given meter type and month:</b>
+
+		<form action="/meter-cost-handler" method="POST">
+
+				<label for="metertype">Pick a meter type</label>
+				<select name="metertype" style="font-family:verdana">
+	      				<option value=""></option>
+						<option value="Natural Gas">Natural Gas</option>
+						<option value="Electric - Grid">Electric - Grid</option>
+				</select>
+				<br>
+				<label for="year">Pick a year</label>
+				<input type="number" min="2009" max="2022" name="year" id="year">
+				<br>
+				<label for="month">Pick a month</label>
+				<select name="month" style="font-family:verdana">
+	      				<option value=""></option>
+						<option value="January">January</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+  				</select>
+
+				<br>
+				<input type="submit" value="Submit">
+		</form>
+
+		<br>
+		<hr>
+
+		<b>Find information for a specific building:</b>
+
+		<form action="/building-handler" method="POST">
+				<label for="building_name">Pick a building name</label>
+				<select name="building_name" style="font-family:verdana">
+						{% for b in building_list %}
+							<option value="{{ b[0] }}">{{ b[0] }}</option>
+						{% endfor %}
+				</select>
+				<br>
+				<input type="submit" value="Submit">
+		</form>
+		<br>
+
+		<p>Map for reference</p>
+		<div>
+			<img src="{{ url_for('static',filename='/images/tcnj-map.png') }}" alt="Map of TCNJ" style="width:85%;display:block;margin-left:auto;margin-right:auto;">
+		</div>
+    </body>
+
+    <!-- minimal styling -->
+    <style>
+        form {
+            margin: 1%;
+        }
+
+        div {
+            margin: 1% 0;
+        }
+		ctr_text {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		sm_left {
+			width: 25%;
+			display: 
+		}
+		/*img {
+			width: 85%;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}*/
+    </style>
+</html>
